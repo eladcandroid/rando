@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 
-export default App = () => {
+const App = () => {
   const [passwords, setPasswords] = useState([]);
-  // Fetch passwords after first mount
-  useEffect(getPasswords, []);
 
-  getPasswords = () => {
+  const getPasswords = () => {
     // Get the passwords and store them in state
     fetch("/api/passwords")
       .then((res) => res.json())
       .then((passwords) => setPasswords(passwords));
   };
+
+  // Fetch passwords after first mount
+  useEffect(getPasswords, []);
 
   return (
     <div className="App">
