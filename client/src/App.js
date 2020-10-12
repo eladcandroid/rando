@@ -31,7 +31,7 @@ const App = () => {
               <li key={index}>{password}</li>
             ))}
           </ul>
-          <button className="more" onClick={this.getPasswords}>
+          <button className="more" onClick={getPasswords}>
             Get More
           </button>
         </div>
@@ -39,7 +39,7 @@ const App = () => {
         // Render a helpful message otherwise
         <div>
           <h1>No passwords :(</h1>
-          <button className="more" onClick={this.getPasswords}>
+          <button className="more" onClick={getPasswords}>
             Try Again?
           </button>
         </div>
