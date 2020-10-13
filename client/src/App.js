@@ -5,6 +5,7 @@ const App = () => {
   const [passwords, setPasswords] = useState([]);
 
   const getPasswords = () => {
+    console.log("getPasswords");
     // Get the passwords and store them in state
     fetch("/api/passwords")
       .then((res) => res.json())
